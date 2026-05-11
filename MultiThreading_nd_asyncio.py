@@ -1,3 +1,5 @@
-import threading
+# Asyncio example :
+
+import asyncio
 import time
 
