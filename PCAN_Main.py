@@ -52,6 +52,7 @@ def PCAN_read():
                 
                 data_format = " ".join([f'{b:02X}' for b in msg.DATA[:msg.LEN]])
                 print(f"ID={msg.ID:03X} , LEN:{msg.LEN} , Data={data_format}")
+                print(type(data_format))
                 
             else:
                 print("Error at reading")
@@ -61,11 +62,14 @@ def PCAN_read():
     except KeyboardInterrupt:
         pcan.Uninitialize(PCAN_USBBUS1)
         print("Stopped")
+        
+def unit_pcan():
+    pcan.Uninitialize(PCAN_USBBUS1)
          
 print(can_init())
 
-time.sleep(1)
+# time.sleep(1)
 
-PCAN_read()
+# PCAN_read()
 
             

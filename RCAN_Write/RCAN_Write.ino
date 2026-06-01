@@ -33,7 +33,8 @@ void loop(){
   delay(1000);
   if(Serial.read() != 'q' && user != "q")
   {
-    if (twai_transmit(&message,1000) == ESP_OK && twai_transmit(&message2,1000) == ESP_OK )
+    //Serial.println(twai_transmit(&message,500));
+    if (twai_transmit(&message,500) == ESP_OK && twai_transmit(&message2,500) == ESP_OK )
     {
       send_msg();
       Serial.println("Sent");
