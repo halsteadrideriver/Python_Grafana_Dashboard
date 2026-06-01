@@ -1,5 +1,4 @@
 import time
-import can
 from PCANBasic import *
 
 pcan = PCANBasic()
